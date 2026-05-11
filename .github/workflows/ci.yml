@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [main, "project/**"]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.41.5"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Flutter pub get
+        run: flutter pub get
+      - name: Analyze
+        run: flutter analyze
+      - name: Test
+        run: flutter test
+      - name: Build web
+        run: flutter build web
+      - name: Install screenshot deps
+        run: python -m pip install -r requirements-dev.txt
+      - name: Render README proof
+        run: python scripts/render_readme_assets.py
