@@ -15,15 +15,16 @@ It turns the portfolio’s control-room themes into a mobile surface: what chang
 ### Briefing Packs
 ![Briefing packs](./screenshots/03-briefing-packs.png)
 
-### Action Queue
-![Action queue](./screenshots/04-action-queue.png)
+### Anatomy Mode
+![Anatomy mode](./screenshots/04-action-queue.png)
 
 ## Features
 
-- Mobile-first briefing shell with bottom navigation
+- Mobile-first briefing shell with premium top chrome and bottom navigation
 - Revenue, risk, and AI signal lanes
 - Board-ready briefing packs
 - Action queue with owner and ETA framing
+- Repo anatomy mode that explains how the artifact is built
 - Runs on Flutter desktop and web targets for quick local proof
 
 ## Local Run
@@ -59,4 +60,3 @@ py -3.11 scripts\render_readme_assets.py
 - [test/widget_test.dart](C:/Users/chaus/dev/repos/mobile-briefing-companion/test/widget_test.dart)
 - [docs/architecture.md](C:/Users/chaus/dev/repos/mobile-briefing-companion/docs/architecture.md)
 - [scripts/render_readme_assets.py](C:/Users/chaus/dev/repos/mobile-briefing-companion/scripts/render_readme_assets.py)
-

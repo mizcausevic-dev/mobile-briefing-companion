@@ -47,10 +47,10 @@ def hero():
     img = Image.new("RGB", (1500, 940), BG)
     draw = ImageDraw.Draw(img)
     phone_shell(draw, 455, 40, 1045, 900)
-    write(draw, (520, 105), "16:30 board prep", ACCENT, 18, True)
-    write(draw, (520, 160), "Mobile Briefing\nCompanion", TEXT, 42, True)
-    write(draw, (520, 280), "Portable briefing packs for revenue,\nrisk, AI, and operations leaders.", MUTED, 21)
-    metrics = [("Packs", "6"), ("Signals", "41"), ("Escalations", "9")]
+    write(draw, (520, 105), "EXECUTIVE BRIEFING", ACCENT, 18, True)
+    write(draw, (520, 160), "Strategy now has\nan on-device control room.", TEXT, 42, True)
+    write(draw, (520, 280), "Revenue, risk, AI, and operator pressure\nmove together in one mobile workflow.", MUTED, 21)
+    metrics = [("Packs", "6"), ("Signals", "41"), ("Pressure", "9")]
     x = 520
     for label, value in metrics:
       rounded(draw, (x, 380, x + 148, 498), CARD, radius=22)
@@ -60,7 +60,7 @@ def hero():
     rounded(draw, (520, 540, 980, 702), CARD, radius=28)
     write(draw, (550, 568), "MOST IMPORTANT NEXT MOVE", PINK, 13)
     write(draw, (550, 602), "Hold deletion in the\nfinance lane.", TEXT, 30, True)
-    write(draw, (550, 685), "Risk: Freeze", YELLOW, 16, True)
+    write(draw, (550, 685), "Risk: Freeze · Sync: Live", YELLOW, 16, True)
     return img
 
 
@@ -103,24 +103,25 @@ def packs():
     return img
 
 
-def actions():
+def anatomy():
     img = Image.new("RGB", (1500, 960), BG)
     draw = ImageDraw.Draw(img)
     phone_shell(draw, 455, 30, 1045, 920)
-    write(draw, (520, 105), "Action queue", TEXT, 38, True)
+    write(draw, (520, 105), "Repo anatomy", TEXT, 38, True)
+    write(draw, (520, 165), "How the real Flutter artifact is put together.", MUTED, 18)
     rows = [
-        ("P1", "Freeze finance deletion jobs", "Records Management · Today"),
-        ("P1", "Update board note on pipeline compression", "Revenue Operations · Before 4:30 PM"),
-        ("P2", "Attach model-risk note to mobile pack", "AI Governance · This sprint"),
+        ("1", "Flutter shell", "Bottom nav, view switching, and mobile-first control-room framing."),
+        ("2", "Signal modes", "Briefing, signals, actions, and anatomy all live in one mobile flow."),
+        ("3", "Validation stack", "Analyze, widget test, web build, and PNG proof keep the repo honest."),
     ]
-    y = 200
-    for priority, title, meta in rows:
-        rounded(draw, (510, y, 990, y + 140), CARD, radius=24)
+    y = 235
+    for badge, title, meta in rows:
+        rounded(draw, (510, y, 990, y + 170), CARD, radius=24)
         rounded(draw, (530, y + 34, 596, y + 100), "#223b59", radius=18)
-        write(draw, (548, y + 54), priority, TEXT, 18, True)
-        write(draw, (620, y + 40), title, TEXT, 22, True)
-        write(draw, (620, y + 82), meta, MUTED, 14)
-        y += 164
+        write(draw, (553, y + 54), badge, ACCENT, 18, True)
+        write(draw, (620, y + 38), title, TEXT, 22, True)
+        write(draw, (620, y + 84), meta, MUTED, 15)
+        y += 190
     return img
 
 
@@ -130,11 +131,10 @@ def main():
         ("01-hero.png", hero()),
         ("02-signals.png", signals()),
         ("03-briefing-packs.png", packs()),
-        ("04-action-queue.png", actions()),
+        ("04-action-queue.png", anatomy()),
     ]:
         image.save(OUT_DIR / name)
 
 
 if __name__ == "__main__":
     main()
-
