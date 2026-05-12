@@ -60,3 +60,7 @@ py -3.11 scripts\render_readme_assets.py
 - [test/widget_test.dart](C:/Users/chaus/dev/repos/mobile-briefing-companion/test/widget_test.dart)
 - [docs/architecture.md](C:/Users/chaus/dev/repos/mobile-briefing-companion/docs/architecture.md)
 - [scripts/render_readme_assets.py](C:/Users/chaus/dev/repos/mobile-briefing-companion/scripts/render_readme_assets.py)
+
+---
+
+**Connect:** [LinkedIn](https://www.linkedin.com/in/mirzacausevic/) · [Kinetic Gain](https://kineticgain.com) · [Medium](https://medium.com/@mizcausevic/) · [Skills](https://mizcausevic.com/skills/)
