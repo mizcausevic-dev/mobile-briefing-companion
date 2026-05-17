@@ -30,8 +30,8 @@ It turns the portfolio’s control-room themes into a mobile surface: what chang
 ## Local Run
 
 ```powershell
-Set-Location "C:\Users\chaus\dev\repos\mobile-briefing-companion"
-$env:Path = "C:\Users\chaus\dev\toolchains\flutter\bin;$env:Path"
+cd mobile-briefing-companion
+# Ensure `flutter` is installed and available on PATH.
 flutter pub get
 flutter run -d windows
 ```
@@ -45,8 +45,8 @@ flutter run -d web-server --web-port 4558
 ## Validation
 
 ```powershell
-Set-Location "C:\Users\chaus\dev\repos\mobile-briefing-companion"
-$env:Path = "C:\Users\chaus\dev\toolchains\flutter\bin;$env:Path"
+cd mobile-briefing-companion
+# Ensure `flutter` is installed and available on PATH.
 flutter analyze
 flutter test
 flutter build web
@@ -56,10 +56,10 @@ py -3.11 scripts\render_readme_assets.py
 
 ## Repo Layout
 
-- [lib/main.dart](C:/Users/chaus/dev/repos/mobile-briefing-companion/lib/main.dart)
-- [test/widget_test.dart](C:/Users/chaus/dev/repos/mobile-briefing-companion/test/widget_test.dart)
-- [docs/architecture.md](C:/Users/chaus/dev/repos/mobile-briefing-companion/docs/architecture.md)
-- [scripts/render_readme_assets.py](C:/Users/chaus/dev/repos/mobile-briefing-companion/scripts/render_readme_assets.py)
+- [lib/main.dart](./lib/main.dart)
+- [test/widget_test.dart](./test/widget_test.dart)
+- [docs/architecture.md](./docs/architecture.md)
+- [scripts/render_readme_assets.py](./scripts/render_readme_assets.py)
 
 ---
 
